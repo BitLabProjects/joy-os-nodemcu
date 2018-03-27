@@ -1,0 +1,3 @@
+local client, dataobj = ...
+
+node.restart()
