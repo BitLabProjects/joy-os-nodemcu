@@ -26,7 +26,7 @@ Open a console and install esptool from pypi using one of the following commands
 
 `pip2 install esptool`
 
-Then from the folder containing the firmware previously built, type the following commands replacing the correct values for your situation:
+Enter flash mode by holding down the flash pushbutton while resetting, then from the folder containing the firmware previously built, type the following command replacing the correct values for your situation:
 
 `esptool.py --port <COM port> write_flash -fm dio -fs 32m 0x00000 <yourfirmwarename>.bin`
 
@@ -48,7 +48,8 @@ Then to upload the files:
 `nodemcu-uploader --port <COM port> upload init.lua`
 
 Run the command for all the core files, which are:
-`init.lua, joy_os.lua, lua_utils.lua`
+`init.lua, joy_os.lua, lua_utils.lua, blinky.lua`
+, then reboot
 
 *TODO: Provide a clean startup with blinking led and an hello console message, then expand below for mqtt*
 

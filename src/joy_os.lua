@@ -5,12 +5,12 @@ end
 function JoyOS:run()
   exec("blinky")
 
-  if exec('devices') then
-    devices = Devices:new()
-    devices:create(Drv8833CtlDevice, 'Drv8833 #1', 0, 1)
-    devices:create(Drv8833MotorDevice, 'Motor #1', 2, 3)
-    devices:create(Drv8833MotorDevice, 'Motor #2', 5, 6)
-  end
+  --if exec('devices') then
+  --  devices = Devices:new()
+  --  devices:create(Drv8833CtlDevice, 'Drv8833 #1', 0, 1)
+  --  devices:create(Drv8833MotorDevice, 'Motor #1', 2, 3)
+  --  devices:create(Drv8833MotorDevice, 'Motor #2', 5, 6)
+  --end
   
   local wifiCfg ={ssid="YourSSIDHere", pwd="YourPasswordHere"}
   
@@ -28,7 +28,7 @@ function JoyOS:run()
       --print("The module MAC address is: " .. wifi.ap.getmac())
       print("WiFi connected, IP is "..wifi.sta.getip())
       
-      exec("mqtt")
+      --exec("mqtt")
     end
   end)
 end
